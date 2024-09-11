@@ -1,0 +1,1 @@
+/* parâmetros , key + value - ex nome + calos, no enderço aparecerá ?keyvalor, depois adiciona & - paf  /key*/

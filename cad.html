@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>CaDasTrO</title>
+
+          <link rel="stylesheet" type="text/css" media="screen" href="cad.css">    <!--eu-->
+          <script src="cad.js"></script>                                          <!--eu-->
+</head>
+
+<body>
+          <h2> Receba informações sobre o mundo do Grafite </h2>
+
+          <a href="index.html"> pag princial </a> 
+
+</body>
+
+          <form>
+
+                    <!-- estou dizendo, sem seguir a ordem dos comandos que nome é a legenda para o elemento ou atributo
+                     "controle etiquetado - o id é valor do atributo, que no caso é name"
+                     placeholder mostra o nome do conteúdo quando este estiver vazio, ao iniciar a digitação o nome desaparece
+                     required mostra que é campo obrigatório-->
+
+                    <label for="name"> Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Nome" required> 
+
+                    <label for="1name"> CPF / CNPJ </label>
+                    <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="cpf" required>
+
+                    <label for="2name"> E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="email" required>
+
+                    <label for="password"> Senha</label>
+                    <input type="password" name="password" id="password" required>
+
+                    <input type="button" value="Salvar" onclick="cadastrar()"
+
+                    <a href="index.html"> pag princial </a> 
+
+
+          </form>
+</html>
