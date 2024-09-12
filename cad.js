@@ -13,20 +13,20 @@ const url = 'https://go-wash-api.onrender.com/api/user';
 
 async function cadastrar(){
 
-          let name = document getElementByld("name").value;
-          let cpf_cnpj = document getElementByld("cpf_cnpj").value;
-          let email = document getElementByld("email").value;
-          let password = document getElementByld("password").value;
-          let birthday = document getElementByld("birthday").value;
+          let name = document.getElementById("name").value;
+          let cpf_cnpj = document.getElementById("cpf_cnpj").value;
+          let email = document.getElementById("email").value;
+          /*let password = document getElementByld("password").value;
+          let birthday = document.getElementByld("birthday").value;*/
           
 
-          let api = await fetch(URL, {method:"post", body:JSON.stringify(
+          let api = await fetch(URL,{method:"post", body:JSON.stringify(
                     {
                     "name": name,
                     "cpf_cnpj": cpf_cnpj,
                     "email": email,
-                    "password": password
-                    "birthday": birthday,
+                    "password": "123456",
+                    "birthday": "15-06-1950",
                     "terms": 1,
                     "user_type_id": 1
                     }
@@ -35,4 +35,19 @@ async function cadastrar(){
                     "Content-type":"application/json"
           }
           })   /* Observa que só agora fecha chave antes do method */
+
+
+          if(api.ok){
+                    let Response = await api.JSON();
+                    console.log(Response);
+                    alert("verificar e-mail");
+                    return
+          }
+
+          let ResponseError = await api.JSON();
+          console.log(ResponseError)
+          alert(ResponseError.data.errors.cpf_cnpj[0])
+          /*alert(ResponseError.data.errors.email[0])
+          alert(ResponseError.data.errors.cpf_name[0])*/    /* porque [0]? nos outros erros coloquei 1 e 2 achando que seria n° de erro */
 }
+
