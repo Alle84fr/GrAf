@@ -5,7 +5,7 @@
 <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>CaDasTrO</title>
+          <title>CaDaStRO</title>
 
           <link rel="stylesheet" type="text/css" media="screen" href="cad.css">    <!--eu-->
           <script src="cad.js"></script>                                          <!--eu-->
@@ -14,8 +14,7 @@
 <body>
           <h2> Receba informações sobre o mundo do Grafite </h2>
 
-          <a href="index.html"> pag princial </a> 
-
+          
 </body>
 
           <form>
@@ -25,22 +24,27 @@
                      placeholder mostra o nome do conteúdo quando este estiver vazio, ao iniciar a digitação o nome desaparece
                      required mostra que é campo obrigatório-->
 
-                    <label for="name"> Nome</label>
+                    <label for="name"> NoMe</label>
                     <input type="text" name="name" id="name" placeholder="Nome" required> 
 
-                    <label for="1name"> CPF / CNPJ </label>
+                    <label for="cpf_cnpj"> CpF / CnPJ </label>
                     <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="cpf" required>
 
-                    <label for="2name"> E-mail</label>
+                    <label for="email"> E-mAiL</label>
                     <input type="text" name="email" id="email" placeholder="email" required>
 
-                    <label for="password"> Senha</label>
+                    <label for="password"> SeNhA</label>
                     <input type="password" name="password" id="password" required>
 
-                    <input type="button" value="Salvar" onclick="cadastrar()"
+                    <label for="birthday"> DaTa AnIvErSáRiO</label>
+                    <input type="date" name="birthday" id="birthday">
 
-                    <a href="index.html"> pag princial </a> 
+                    <label for="terms"> TeRmO</label>
+                    <input type="checkbox" name="terms" id="terms" required>
 
-
+                    <input type="button" value="Salvar" onclick="cadastrar()">
           </form>
+
+          <br><a href="index.html"> PaG PrInCiPaL </a> 
+          <br><a href="log.html"> LoGiN </a> 
 </html>
