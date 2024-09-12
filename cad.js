@@ -9,12 +9,30 @@ fetch(url,{metodo:post (ou get ou put), body:json.stringify (converte o json({co
 await aguarda a requisição - para ser async - função assíncrona, "não contante" 
 depois faz conferimento com if, neste caso*/
 
-function cadastrar(){
+const url = 'https://go-wash-api.onrender.com/api/user';
 
-          let name = document getElementByld("name").value
-          let cpf_cnpj =
-          let email
-          let password =
+async function cadastrar(){
 
+          let name = document getElementByld("name").value;
+          let cpf_cnpj = document getElementByld("cpf_cnpj").value;
+          let email = document getElementByld("email").value;
+          let password = document getElementByld("password").value;
+          let birthday = document getElementByld("birthday").value;
+          
 
+          let api = await fetch(URL, {method:"post", body:JSON.stringify(
+                    {
+                    "name": name,
+                    "cpf_cnpj": cpf_cnpj,
+                    "email": email,
+                    "password": password
+                    "birthday": birthday,
+                    "terms": 1,
+                    "user_type_id": 1
+                    }
+          ),
+          headers:{
+                    "Content-type":"application/json"
+          }
+          })   /* Observa que só agora fecha chave antes do method */
 }
