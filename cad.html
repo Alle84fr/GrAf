@@ -12,41 +12,47 @@
 </head>
 
 <body>
-          <h2> Receba informações sobre o mundo do Grafite </h2>
 
-          
+          <select class="form">
 
+                    <h2> Receba informações sobre o mundo do Grafite </h2>
 
-          <form>
+                    <div>
 
-                    <!-- estou dizendo, sem seguir a ordem dos comandos que nome é a legenda para o elemento ou atributo
-                     "controle etiquetado - o id é valor do atributo, que no caso é name"
-                     placeholder mostra o nome do conteúdo quando este estiver vazio, ao iniciar a digitação o nome desaparece
-                     required mostra que é campo obrigatório-->
+                               <form>
 
-                    <label for="name"> Nome</label>
-                    <input type="text" name="name" id="name" placeholder="Nome"/> 
+                                        <!-- estou dizendo, sem seguir a ordem dos comandos que nome é a legenda para o elemento ou atributo
+                                        "controle etiquetado - o id é valor do atributo, que no caso é name"
+                                        placeholder mostra o nome do conteúdo quando este estiver vazio, ao iniciar a digitação o nome desaparece
+                                        required mostra que é campo obrigatório-->
 
-                    <label for="cpf_cnpj"> cpf_cnpj </label>
-                    <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="cpf"/>
+                                        <label for="name"> Nome</label>
+                                        <input type="text" name="name" id="name" placeholder="Nome"> 
 
-                    <label for="email"> E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="email"/>
+                                        <label for="cpf_cnpj"> cpf_cnpj </label>
+                                        <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="cpf">
 
-                    <label for="password"> Senha</label>
-                    <input type="password" name="password" id="password" autocomplete="on"/>
+                                        <label for="email"> E-mail</label>
+                                        <input type="text" name="email" id="email" placeholder="email">
 
-                    <label for="birthday"> Data aniversário</label>
-                    <input type="date" name="birthday" id="birthday" autocomplete="birthday"/>
+                                        <label for="password"> Senha</label>
+                                        <input type="password" name="password" id="password" autocomplete="on">
 
-                    <label for="terms"> Termo</label>
-                    <input type="checkbox" name="terms" id="terms"/>
+                                        <label for="birthday"> Data aniversário</label>
+                                        <input type="date" name="birthday" id="birthday" autocomplete="birthday">
 
-                    
-                    <input type="button" value="cadastrar" onclick="cadastrar()"/>
-          </form>
+                                        <label for="terms"> Termo</label>
+                                        <input type="checkbox" name="terms" id="terms">
 
-          <br><a href="index.html"> PaG PrInCiPaL </a> 
-          <br><a href="log.html"> LoGiN </a> 
+                                        
+                                        <input type="button" value="cadastrar" onclick="cadastrar()">
+                              </form>
+                    </div>
+          </select>
+
+          <header>
+                    <br><a href="index.html"> PaG PrInCiPaL </a> 
+                    <br><a href="log.html"> LoGiN </a> 
+          </header>
 </body>
 </html>

@@ -9,7 +9,7 @@ fetch(url,{metodo:post (ou get ou put), body:json.stringify (converte o json({co
 await aguarda a requisição - para ser async - função assíncrona, "não contante" 
 depois faz conferimento com if, neste caso*/
 
-const url = 'https://go-wash-api.onrender.com/api/user';
+const url = "https://go-wash-api.onrender.com/api/user"; 
 
 async function cadastrar(){
 
@@ -27,7 +27,7 @@ async function cadastrar(){
                     "name": name,
                     "email": email,
                     "user_type_id":1
-                    "password": 123456,
+                    "password": "123456",
                     "cpf_cnpj": cpf_cnpj,
                     "terms": 1,
                     "birthday": "2000-10-12",   /* como por auto complete em bith e pass, que não irei digitar? */
@@ -41,15 +41,15 @@ async function cadastrar(){
 
 
           if(api.ok){
-                    let Response = await api.JSON();
-                    console.log(Response);
+                    let resposta = await api.json();
+                    console.log(resposta);
                     alert("verificar e-mail");
-                    return false
+                    return 
           }
 
-          let ResponseError = await api.JSON();
+          let respostaError = await api.json();
           console.log(ResponseError)
-          alert(ResponseError.data.errors.cpf_cnpj[0])
+          /*alert(ResponseError.data.errors.cpf_cnpj[0])*/
           /*alert(ResponseError.data.errors.email[0])
           alert(ResponseError.data.errors.cpf_name[0])*/    /* porque [0]? nos outros erros coloquei 1 e 2 achando que seria n° de erro */
 }
