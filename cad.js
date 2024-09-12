@@ -16,19 +16,22 @@ async function cadastrar(){
           let name = document.getElementById("name").value;
           let cpf_cnpj = document.getElementById("cpf_cnpj").value;
           let email = document.getElementById("email").value;
-          /*let password = document getElementByld("password").value;
-          let birthday = document.getElementByld("birthday").value;*/
+          let password = 123456;
+          let birthday = "2000-10-12";
+          let terms = 1;
+          let user_type_id = 1;
           
 
-          let api = await fetch(URL,{method:"post", body:JSON.stringify(
+         let api = await fetch(url,{method:"POST", body:JSON.stringify(
                     {
                     "name": name,
-                    "cpf_cnpj": cpf_cnpj,
                     "email": email,
-                    "password": "123456",
-                    "birthday": "15-06-1950",
+                    "user_type_id":1
+                    "password": 123456,
+                    "cpf_cnpj": cpf_cnpj,
                     "terms": 1,
-                    "user_type_id": 1
+                    "birthday": "2000-10-12",   /* como por auto complete em bith e pass, que não irei digitar? */
+
                     }
           ),
           headers:{
@@ -41,7 +44,7 @@ async function cadastrar(){
                     let Response = await api.JSON();
                     console.log(Response);
                     alert("verificar e-mail");
-                    return
+                    return false
           }
 
           let ResponseError = await api.JSON();
