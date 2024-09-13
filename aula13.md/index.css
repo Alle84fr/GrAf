@@ -1,0 +1,40 @@
+body{
+          background-color: blueviolet;
+          /*mudar cor letras*/
+          color: black;
+
+}
+
+/*estilizando tag
+grid layou conta pelas linhas da borda e junção*/
+
+
+#container{
+          display:grid ; 
+          grid-template-columns: 1fr 1fr 1f; /* 3 linhas na vertical  fr deixa componente flexivel, aumenta e dininui - se baseie nas linhas*/
+}
+header{
+          background-color: rgb(43, 226, 80);
+          color: blanchedalmond;
+          grid-column: 1/4; /*inicia na 1° coluna e termina 4 - ocupa toda espaço*/
+}
+
+main{
+          background-color: black;
+          color: rgb(43, 186, 226);
+          grid-column: 1/3; /*começa na 1, na linha de fora e ternana an penultima*/
+
+}
+
+footer{
+          background-color: brown;
+          color: black;
+          grid-column:1/4 ;
+          grid-template-rows:10vh ;/* vh do site - dá 10% do quee stou vendo na primeira linha, 70  da segunda e */
+}
+
+aside{
+          background-color: blue;
+          
+          grid-column: ;
+}

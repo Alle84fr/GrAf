@@ -9,11 +9,14 @@ fetch(url,{metodo:post (ou get ou put), body:json.stringify (converte o json({co
 await aguarda a requisição - para ser async - função assíncrona, "não contante" 
 depois faz conferimento com if, neste caso*/
 
+
+/* api governo
+viaCEP - */
 const url = "https://go-wash-api.onrender.com/api/user"; 
 
 async function cadastrar(){
 
-          let name = document.getElementById("name").value;
+          let name = document.getElementById("name").value;      /*método*/
           let cpf_cnpj = document.getElementById("cpf_cnpj").value;
           let email = document.getElementById("email").value;
           let password = 123456;
