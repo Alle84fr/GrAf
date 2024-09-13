@@ -19,28 +19,16 @@ async function cadastrar(){
           let name = document.getElementById("name").value;      /*método*/
           let cpf_cnpj = document.getElementById("cpf_cnpj").value;
           let email = document.getElementById("email").value;
-          let password = 123456;
+          let password = "123456";
           let birthday = "2000-10-12";
           let terms = 1;
           let user_type_id = 1;
-          
 
-         let api = await fetch(url,{method:"POST", body:JSON.stringify(
-                    {
-                    "name": name,
-                    "email": email,
-                    "user_type_id":1
-                    "password": "123456",
-                    "cpf_cnpj": cpf_cnpj,
-                    "terms": 1,
-                    "birthday": "2000-10-12",   /* como por auto complete em bith e pass, que não irei digitar? */
 
-                    }
-          ),
-          headers:{
-                    "Content-type":"application/json"
-          }
-          })   /* Observa que só agora fecha chave antes do method */
+         let api = await fetch(url,{method:"POST", body:JSON.stringify("name": name, "email": email,"user_type_id":1, "password": "123456","cpf_cnpj": cpf_cnpj, "terms": 1,"birthday": "2000-10-12"})
+
+          headers:{"Content-type":"application/json"}
+          }   /* Observa que só agora fecha chave antes do method */
 
 
           if(api.ok){
